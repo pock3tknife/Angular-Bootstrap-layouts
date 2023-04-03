@@ -9,6 +9,7 @@ import { LoginComponent } from "./examples/login/login.component";
 import { ProfileComponent } from "./examples/profile/profile.component";
 import { NucleoiconsComponent } from "./components/nucleoicons/nucleoicons.component";
 import { AsymmetricalComponent } from "./components/components.asymmetrical";
+import { CardsComponent } from "./components/components.cards";
 
 const routes: Routes = [
   { path: "", redirectTo: "index", pathMatch: "full" },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "examples/login", component: LoginComponent },
   { path: "examples/profile", component: ProfileComponent },
   { path: "asymmetrical", component: AsymmetricalComponent },
+  { path: "cards", component: CardsComponent },
 ];
 
 @NgModule({

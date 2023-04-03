@@ -10,9 +10,15 @@ import { ExamplesModule } from "./examples/examples.module";
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { AsymmetricalComponent } from "./components/components.asymmetrical";
+import { CardsComponent } from "./components/components.cards";
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, AsymmetricalComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    AsymmetricalComponent,
+    CardsComponent,
+  ],
   imports: [
     BrowserAnimationsModule,
     NgbModule,
