@@ -11,6 +11,7 @@ import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { AsymmetricalComponent } from "./components/components.asymmetrical";
 import { CardsComponent } from "./components/components.cards";
+import { SplitScreenComponent } from "./components/components.splitscreen";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CardsComponent } from "./components/components.cards";
     NavbarComponent,
     AsymmetricalComponent,
     CardsComponent,
+    SplitScreenComponent,
   ],
   imports: [
     BrowserAnimationsModule,

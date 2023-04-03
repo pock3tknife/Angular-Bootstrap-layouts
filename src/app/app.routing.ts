@@ -10,6 +10,7 @@ import { ProfileComponent } from "./examples/profile/profile.component";
 import { NucleoiconsComponent } from "./components/nucleoicons/nucleoicons.component";
 import { AsymmetricalComponent } from "./components/components.asymmetrical";
 import { CardsComponent } from "./components/components.cards";
+import { SplitScreenComponent } from "./components/components.splitscreen";
 
 const routes: Routes = [
   { path: "", redirectTo: "index", pathMatch: "full" },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: "examples/profile", component: ProfileComponent },
   { path: "asymmetrical", component: AsymmetricalComponent },
   { path: "cards", component: CardsComponent },
+  { path: "splitscreen", component: SplitScreenComponent },
 ];
 
 @NgModule({
