@@ -12,6 +12,7 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { AsymmetricalComponent } from "./components/components.asymmetrical";
 import { CardsComponent } from "./components/components.cards";
 import { SplitScreenComponent } from "./components/components.splitscreen";
+import { DashboardComponent } from "./components/pages/dashboard/dashboard.component";
 
 @NgModule({
   declarations: [
