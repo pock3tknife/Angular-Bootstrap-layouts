@@ -6,200 +6,277 @@
       style="background-image: url('assets/img/bg5.jpg')"
     ></div>
   </div>
-  <div class="sidebar" data-color="white" data-active-color="danger">
-    <div class="sidebar-wrapper">
-      <div class="logo">
-        <a href="#" class="simple-text logo-mini">
-          <div class="logo-image-small">
-            <img src="assets/img/angular2-logo.png" />
-          </div>
-        </a>
-        <a href="#" class="simple-text logo-normal"> ReynaldLawrence </a>
-      </div>
-      <ul class="nav">
-        <li
-          *ngFor="let menuItem of menuItems"
-          routerLinkActive="active"
-          class="{{ menuItem.class }}"
-        >
-          <a [routerLink]="[menuItem.path]">
-            <i class="nc-icon {{ menuItem.icon }}"></i>
-            <p>{{ menuItem.title }}</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="main-panel">
-    <div class="content">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-5 col-md-4">
-                  <div class="icon-big text-center icon-warning">
-                    <i class="nc-icon nc-globe text-warning"></i>
+
+  <main id="main">
+    <div class="container-fluid">
+      <div class="row min-vh-100 flex-column flex-md-row">
+        <!--sidebar-->
+        <aside class="col-12 col-md-3 col-xl-2 p-0 bg-primary flex-shrink-1">
+          <nav
+            class="navbar navbar-expand-md navbar-dark bd-dark flex-md-column flex-row align-items-center py-2 text-center sticky-top"
+            id="sidebar"
+          >
+            <div class="text-center p-3">
+              <img
+                src="assets/img/apple-touch-icon.png"
+                alt=""
+                alt="profile picture"
+                class="img-fluid rounded-circle my-4 p-1 d-none d-md-block shadow"
+              />
+            </div>
+
+            <div class="position-sticky">
+              <div class="list-group list-group-flush mx-3 mt-4">
+                <a
+                  routerLink="/dashboard"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  aria-current="true"
+                >
+                  <i class="fas fa-tachometer-alt fa-fw me-3"></i
+                  ><span>Main dashboard</span>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                >
+                  <i class="fas fa-chart-area fa-fw me-3"></i
+                  ><span>Webiste traffic</span>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-lock fa-fw me-3"></i
+                  ><span>Password</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-chart-line fa-fw me-3"></i
+                  ><span>Analytics</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                >
+                  <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-chart-bar fa-fw me-3"></i
+                  ><span>Orders</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-globe fa-fw me-3"></i
+                  ><span>International</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-building fa-fw me-3"></i
+                  ><span>Partners</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-calendar fa-fw me-3"></i
+                  ><span>Calendar</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a
+                >
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action py-2 ripple bg-primary"
+                  ><i class="fas fa-money-bill fa-fw me-3"></i
+                  ><span>Sales</span></a
+                >
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <!---->
+
+        <div class="main-panel">
+          <div class="content">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="nc-icon nc-globe text-warning"></i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-category">Capacity</p>
+                          <p class="card-title">150GB</p>
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <hr />
+                    <div class="stats">
+                      <i class="fa fa-refresh"></i> Update Now
+                    </div>
                   </div>
                 </div>
-                <div class="col-7 col-md-8">
-                  <div class="numbers">
-                    <p class="card-category">Capacity</p>
-                    <p class="card-title">150GB</p>
-                    <p></p>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="nc-icon nc-money-coins text-success"></i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-category">Revenue</p>
+                          <p class="card-title">$ 1,345</p>
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <hr />
+                    <div class="stats">
+                      <i class="fa fa-calendar-o"></i> Last day
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="nc-icon nc-vector text-danger"></i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-category">Errors</p>
+                          <p class="card-title">23</p>
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <hr />
+                    <div class="stats">
+                      <i class="fa fa-clock-o"></i> In the last hour
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="nc-icon nc-favourite-28 text-primary"></i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-category">Followers</p>
+                          <p class="card-title">+45K</p>
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <hr />
+                    <div class="stats">
+                      <i class="fa fa-refresh"></i> Update now
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card-footer">
-              <hr />
-              <div class="stats"><i class="fa fa-refresh"></i> Update Now</div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Users Behavior</h5>
+                    <p class="card-category">24 Hours performance</p>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="chartHours" width="400" height="100"></canvas>
+                  </div>
+                  <div class="card-footer">
+                    <hr />
+                    <div class="stats">
+                      <i class="fa fa-history"></i> Updated 3 minutes ago
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Email Statistics</h5>
+                    <p class="card-category">Last Campaign Performance</p>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="chartEmail"></canvas>
+                  </div>
+                  <div class="card-footer">
+                    <div class="legend">
+                      <i class="fa fa-circle text-primary"></i> Opened
+                      <i class="fa fa-circle text-warning"></i> Read
+                      <i class="fa fa-circle text-danger"></i> Deleted
+                      <i class="fa fa-circle text-gray"></i> Unopened
+                    </div>
+                    <hr />
+                    <div class="stats">
+                      <i class="fa fa-calendar"></i> Number of emails sent
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card card-chart">
+                  <div class="card-header">
+                    <h5 class="card-title">NASDAQ: AAPL</h5>
+                    <p class="card-category">Line Chart with Points</p>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="speedChart" width="400" height="100"></canvas>
+                  </div>
+                  <div class="card-footer">
+                    <div class="chart-legend">
+                      <i class="fa fa-circle text-info"></i> Tesla Model S
+                      <i class="fa fa-circle text-warning"></i> BMW 5 Series
+                    </div>
+                    <hr />
+                    <div class="card-stats">
+                      <i class="fa fa-check"></i> Data information certified
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-5 col-md-4">
-                  <div class="icon-big text-center icon-warning">
-                    <i class="nc-icon nc-money-coins text-success"></i>
-                  </div>
-                </div>
-                <div class="col-7 col-md-8">
-                  <div class="numbers">
-                    <p class="card-category">Revenue</p>
-                    <p class="card-title">$ 1,345</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <hr />
-              <div class="stats"><i class="fa fa-calendar-o"></i> Last day</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-5 col-md-4">
-                  <div class="icon-big text-center icon-warning">
-                    <i class="nc-icon nc-vector text-danger"></i>
-                  </div>
-                </div>
-                <div class="col-7 col-md-8">
-                  <div class="numbers">
-                    <p class="card-category">Errors</p>
-                    <p class="card-title">23</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <hr />
-              <div class="stats">
-                <i class="fa fa-clock-o"></i> In the last hour
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-5 col-md-4">
-                  <div class="icon-big text-center icon-warning">
-                    <i class="nc-icon nc-favourite-28 text-primary"></i>
-                  </div>
-                </div>
-                <div class="col-7 col-md-8">
-                  <div class="numbers">
-                    <p class="card-category">Followers</p>
-                    <p class="card-title">+45K</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <hr />
-              <div class="stats"><i class="fa fa-refresh"></i> Update now</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-              <h5 class="card-title">Users Behavior</h5>
-              <p class="card-category">24 Hours performance</p>
-            </div>
-            <div class="card-body">
-              <canvas id="chartHours" width="400" height="100"></canvas>
-            </div>
-            <div class="card-footer">
-              <hr />
-              <div class="stats">
-                <i class="fa fa-history"></i> Updated 3 minutes ago
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              <h5 class="card-title">Email Statistics</h5>
-              <p class="card-category">Last Campaign Performance</p>
-            </div>
-            <div class="card-body">
-              <canvas id="chartEmail"></canvas>
-            </div>
-            <div class="card-footer">
-              <div class="legend">
-                <i class="fa fa-circle text-primary"></i> Opened
-                <i class="fa fa-circle text-warning"></i> Read
-                <i class="fa fa-circle text-danger"></i> Deleted
-                <i class="fa fa-circle text-gray"></i> Unopened
-              </div>
-              <hr />
-              <div class="stats">
-                <i class="fa fa-calendar"></i> Number of emails sent
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="card card-chart">
-            <div class="card-header">
-              <h5 class="card-title">NASDAQ: AAPL</h5>
-              <p class="card-category">Line Chart with Points</p>
-            </div>
-            <div class="card-body">
-              <canvas id="speedChart" width="400" height="100"></canvas>
-            </div>
-            <div class="card-footer">
-              <div class="chart-legend">
-                <i class="fa fa-circle text-info"></i> Tesla Model S
-                <i class="fa fa-circle text-warning"></i> BMW 5 Series
-              </div>
-              <hr />
-              <div class="card-stats">
-                <i class="fa fa-check"></i> Data information certified
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--<div class="fixed-plugin">
+        <!--<div class="fixed-plugin">
     <div class="show-dropdown" ngbDropdown>
       <a href="javascript:void(0)" ngbDropdownToggle id="dropdownConfig">
         <i class="fa fa-cog fa-2x"> </i>
@@ -254,4 +331,31 @@
       </ul>
     </div>
   </div>-->
+      </div>
+    </div>
+  </main>
+  <footer class="footer footer-default">
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="#"> ReynaldLawrence </a>
+          </li>
+          <li>
+            <a href="#"> About Us </a>
+          </li>
+          <li>
+            <a href="#"> Blog </a>
+          </li>
+          <li>
+            <a href="#"> MIT License </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        &copy; 2023, Designed by . Coded by
+        <a href="#" target="_blank">ReynaldLawrence</a>.
+      </div>
+    </div>
+  </footer>
 </div>
